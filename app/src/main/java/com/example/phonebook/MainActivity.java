@@ -3,6 +3,7 @@ package com.example.phonebook;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Adapter;
 import android.widget.ImageView;
@@ -52,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
         adapter = new PhonebookAdapter(this,people);
         recyclerView.setAdapter(adapter);
         add_home_btn.setOnClickListener(v->{
-
+            Intent addUserIntent = new Intent(MainActivity.this, AddUserActivity.class);
+            startActivity(addUserIntent);
         });
 
 

@@ -4,6 +4,126 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddUserActivity">
+    tools:context=".AddUserActivity"
+    android:background="@color/dark">
 
+    <include
+        android:id="@+id/add_user_toolbar"
+        layout="@layout/add_user_toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/savetoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_user_toolbar"
+        android:background="#17FFFFFF"
+        android:paddingVertical="5dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save to"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginVertical="10dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/save_btn"
+            android:layout_marginLeft="10dp">
+            <Spinner
+                android:id="@+id/sim_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/savetoLayout"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp"
+        android:orientation="vertical"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/AddFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:background="@drawable/text_input_edit_text_bg"
+            android:padding="12dp"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="10dp"
+            android:tooltipText="Enter First Name Here"
+            />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/AddLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Last Name"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:background="@drawable/text_input_edit_text_bg"
+            android:padding="12dp"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="10dp"
+            android:tooltipText="Enter Last Name Here"
+            android:layout_marginTop="10dp"
+            />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/AddNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:background="@drawable/text_input_edit_text_bg"
+            android:padding="12dp"
+            android:drawableStart="@drawable/ic_baseline_local_phone_24"
+            android:drawablePadding="10dp"
+            android:tooltipText="Enter Number Here"
+            android:layout_marginTop="10dp"
+            />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/AddEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:background="@drawable/text_input_edit_text_bg"
+            android:padding="12dp"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="10dp"
+            android:tooltipText="Enter Email Here"
+            android:layout_marginTop="10dp"
+            />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/AddAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:background="@drawable/text_input_edit_text_bg"
+            android:padding="12dp"
+            android:drawableStart="@drawable/ic_baseline_location_on_24"
+            android:drawablePadding="10dp"
+            android:tooltipText="Enter Address Here"
+            android:layout_marginTop="10dp"
+            />
+
+
+
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
